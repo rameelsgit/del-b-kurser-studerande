@@ -9,5 +9,13 @@ class Students
     {
         StudentsName=name;
     }
-
+// metod för studneter pågående 
+        public void Join (Courses StudentsCourse)
+    {
+        if (CoursesL.Contains(StudentsCourse))
+        {
+            
+        }
+    
+    }
 }
