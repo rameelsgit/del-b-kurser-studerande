@@ -1,4 +1,6 @@
 //skapat class för studenter
+using System.Security.Cryptography.X509Certificates;
+
 class Students
 {
     public string? StudentsName;
@@ -9,13 +11,27 @@ class Students
     {
         StudentsName=name;
     }
-// metod för studneter pågående 
-        public void Join (Courses StudentsCourse)
+// metod för studenter, som lägger till dem i curser
+        public void Join (Courses studentsCourse)
     {
-        if (CoursesL.Contains(StudentsCourse))
-        {
-            
-        }
-    
+        // studentcourse anropar Enroll metoden här och följer alla enroll kraven.
+        studentsCourse.Enroll(this);
+        // if (!CoursesL.Contains(studentsCourse))
+        // {
+        // CoursesL.Add(studentsCourse);
+        // studentsCourse.StudentL.Add(this);
+        // }
+        // else
+        // {
+        //     Console.WriteLine("You are alrady enrolled in this course");
+        // }
     }
+        
+        //leave metoed som kopplar med studentlistan
+        public void Leave (Courses leaveCourse)
+    {
+        CoursesL.Remove(leaveCourse);
+        leaveCourse.StudentL.Remove(this);
+    }
+    
 }

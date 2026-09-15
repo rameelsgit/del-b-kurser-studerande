@@ -5,12 +5,17 @@ Students Bill = new ("Bill Jill");
 Students Talha = new ("Talha Talwar");
 // kurs objekt för att testa 
 Courses Mathematic = new ("Mathematics");
+Courses Physics = new ("Phisics");
+
 
 // anropar enroll metoden
 Mathematic.Enroll(Rameel);
 Mathematic.Enroll(Jameel);
 Mathematic.Enroll(Bill);
-Mathematic.Enroll(Talha);
 
 // anropar rollcall metoden som skriver ut lista på studenter i kursen.
 Mathematic.RollCall();
+
+Talha.Join(Physics);
+
+Physics.RollCall();
