@@ -1,5 +1,7 @@
- // skapat class för courses
- class Courses 
+// skapat class för courses
+using System.Security.Cryptography;
+
+class Courses 
 {
     public string? CourseName;
     public int MaxSeats= 3;
@@ -45,6 +47,12 @@
         {
             Console.WriteLine(StudentL[i].StudentsName);
         }  
+    }
+
+// to-string metoden skriver ut namnet på kursen med andtal studenter som finns i kursen
+    public override string ToString()
+    {
+        return $"{CourseName}, {StudentL.Count} out of {MaxSeats} students";
     }
 
     
