@@ -21,3 +21,6 @@ Talha.Join(Mathematic);
 Talha.Schedule();
 
 Physics.RollCall();
+
+Console.WriteLine("to string test:");
+Console.WriteLine(Talha.ToString());

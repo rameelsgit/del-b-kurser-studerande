@@ -43,4 +43,11 @@ class Students
             Console.WriteLine($" {StudentsName.CourseName} ");
         }
     }
+
+// to-string metod som skriver ut den studerandes namn
+    public override string ToString()
+    {
+        return $"{StudentsName}";
+    }
+
 }
