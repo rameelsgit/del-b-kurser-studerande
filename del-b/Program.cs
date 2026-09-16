@@ -5,7 +5,7 @@ Students Bill = new ("Bill Jill");
 Students Talha = new ("Talha Talwar");
 // kurs objekt för att testa 
 Courses Mathematic = new ("Mathematics");
-Courses Physics = new ("Phisics");
+Courses Physics = new ("Physics");
 
 
 // anropar enroll metoden
@@ -17,5 +17,7 @@ Mathematic.Enroll(Bill);
 Mathematic.RollCall();
 
 Talha.Join(Physics);
+Talha.Join(Mathematic);
+Talha.Schedule();
 
 Physics.RollCall();

@@ -33,5 +33,14 @@ class Students
         CoursesL.Remove(leaveCourse);
         leaveCourse.StudentL.Remove(this);
     }
-    
+    //metod för schedule som skriver ut elevens kurser
+    public void Schedule()
+    {
+        Console.WriteLine($"Schedule for {StudentsName}");
+        foreach ( var StudentsName in CoursesL)
+        //anropar coursename från Course classen annars kunde jag inte visa individuella kurser
+        {
+            Console.WriteLine($" {StudentsName.CourseName} ");
+        }
+    }
 }
