@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 class Courses 
 {
     public string? CourseName;
-    public int MaxSeats= 4;
+    public int MaxSeats= 3;
     public List<Students> StudentL = [];
 // skapat konstruktor för courses
     public Courses (string name)
@@ -24,7 +24,6 @@ class Courses
         else if (StudentL.Count()>=MaxSeats)
         {
             Console.WriteLine("The course is full");
-            
         }
         else
         {
