@@ -13,10 +13,15 @@ Mathematic.Enroll(Rameel);
 Mathematic.Enroll(Jameel);
 Mathematic.Enroll(Bill);
 
+
 // anropar rollcall metoden som skriver ut lista på studenter i kursen.
 Mathematic.RollCall();
 
 Talha.Join(Physics);
+Talha.Join(Physics);
+
+// Physics.Enroll(Talha);
+
 Talha.Join(Mathematic);
 Talha.Schedule();
 

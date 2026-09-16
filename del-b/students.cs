@@ -16,6 +16,8 @@ class Students
     {
         // studentcourse anropar Enroll metoden här och följer alla enroll kraven.
         studentsCourse.Enroll(this);
+
+        
         // if (!CoursesL.Contains(studentsCourse))
         // {
         // CoursesL.Add(studentsCourse);

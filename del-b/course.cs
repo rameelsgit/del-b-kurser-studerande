@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 class Courses 
 {
     public string? CourseName;
-    public int MaxSeats= 3;
+    public int MaxSeats= 4;
     public List<Students> StudentL = [];
 // skapat konstruktor för courses
     public Courses (string name)
@@ -17,15 +17,16 @@ class Courses
         // kollar om kursen är full och kollar om student redan finns 
         //  annars läggs studenterna till i kursen 
 
-        if (StudentL.Count()==MaxSeats)
-        {
-            Console.WriteLine("The course is full");
-            return;
-        }
-        else if (StudentL.Contains(courseStudents))
+        if (StudentL.Contains(courseStudents))
         {
             Console.WriteLine("You already have this course");
         }
+        else if (StudentL.Count()>=MaxSeats)
+        {
+            Console.WriteLine("The course is full");
+            
+        }
+        else
         {
         StudentL.Add(courseStudents);
         //kombinerar enroll metod med join metoden 
