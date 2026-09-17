@@ -1,17 +1,16 @@
 // skapat class för courses
 using System.Security.Cryptography;
-
 class Courses 
 {
     public string? CourseName;
     public int MaxSeats= 3;
     public List<Students> StudentL = [];
-// skapat konstruktor för courses
+// skapat konstruktor för courses, initierar ny kurs
     public Courses (string name)
     {
         CourseName=name;
     }
-// metod för att studenter ska kunna enroll i kurser,  
+// metod för att studenter ska kunna enroll i kurser
     public void Enroll (Students courseStudents)
     {
         // kollar om kursen är full och kollar om student redan finns 
@@ -28,12 +27,12 @@ class Courses
         else
         {
         StudentL.Add(courseStudents);
-        //kombinerar enroll metod med join metoden 
+        //kombinerar enroll metod med join metoden, gör det dubbelriktiad
         courseStudents.CoursesL.Add(this);
         }
     }
 
-// denna metoden tar bort studenter från cursen, .remove tar bort från studnet listan
+// denna metoden tar bort studenter från cursen, .remove tar bort från stuentlistan
     public void Remove (Students removeStudents)
     {
         StudentL.Remove(removeStudents);

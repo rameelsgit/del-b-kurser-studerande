@@ -1,4 +1,4 @@
-//skapat class för studenter
+//skapat class för studenter. håller koll på vilka kurser studenten läser
 using System.Security.Cryptography.X509Certificates;
 
 class Students
@@ -11,25 +11,14 @@ class Students
     {
         StudentsName=name;
     }
-// metod för studenter, som lägger till dem i curser
+// metod för studenter, som lägger till dem i courses
         public void Join (Courses studentsCourse)
     {
-        // studentcourse anropar Enroll metoden här och följer alla enroll kraven.
+        // studentcourse anropar Courses egna Enroll metod. Och följer alla enroll kraven. 
         studentsCourse.Enroll(this);
-
-        
-        // if (!CoursesL.Contains(studentsCourse))
-        // {
-        // CoursesL.Add(studentsCourse);
-        // studentsCourse.StudentL.Add(this);
-        // }
-        // else
-        // {
-        //     Console.WriteLine("You are alrady enrolled in this course");
-        // }
     }
         
-        //leave metoed som kopplar med studentlistan
+        //leave metod som kopplar med studentlistan. metoden tar bort kurs från studenten och uppdaterar åt båda hållen
         public void Leave (Courses leaveCourse)
     {
         CoursesL.Remove(leaveCourse);

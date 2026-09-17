@@ -10,7 +10,7 @@ Courses Physics = new ("Physics");
 
 
 
-// anropar enroll metoden
+// anropar enroll metoden och fyller mathematics course
 Mathematic.Enroll(Rameel);
 Mathematic.Enroll(Jameel);
 Mathematic.Enroll(Bill);
@@ -29,10 +29,11 @@ Mathematic.RollCall();
 
 Console.WriteLine("");
 
-
-Talha.Join(Physics); // lägger till i samma kurs
+// test mot dubletter 
+Talha.Join(Physics); // lägger till studenten i samma kurs två gånger
 Physics.Enroll(Talha);// inga dubletter visas
 
+// anropar schedule metoden som ska skriva ut studentens schema
 Talha.Schedule();
 
 Console.WriteLine("");
@@ -40,7 +41,6 @@ Console.WriteLine("");
 Physics.Remove(Rameel);// programmet kraschar inte
 Rameel.Leave(Physics);// programmet kraschar fortfarande inte
 
-// Physics.RollCall();
 
 Console.WriteLine("To-string test:");
 Console.WriteLine(Talha.ToString());
